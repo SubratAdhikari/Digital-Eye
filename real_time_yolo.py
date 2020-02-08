@@ -6,11 +6,11 @@ import serial
 
         # Loading Yolov3 weights and its label
 
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+net = cv2.dnn.readNet("models/yolov3.weights", "models/yolov3.cfg")
 
         # Loadind coco names in list 
 classes = []
-with open("coco.names", "r") as f:
+with open("models/coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
         # extracting output layer
